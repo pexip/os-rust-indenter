@@ -1,0 +1,37 @@
+Source: rust-indenter
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Jelmer Vernooĳ <jelmer@debian.org>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/indenter]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/indenter
+Homepage: https://github.com/yaahc/indenter
+Rules-Requires-Root: no
+
+Package: librust-indenter-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Provides:
+ librust-indenter+default-dev (= ${binary:Version}),
+ librust-indenter+std-dev (= ${binary:Version}),
+ librust-indenter-0-dev (= ${binary:Version}),
+ librust-indenter-0+default-dev (= ${binary:Version}),
+ librust-indenter-0+std-dev (= ${binary:Version}),
+ librust-indenter-0.3-dev (= ${binary:Version}),
+ librust-indenter-0.3+default-dev (= ${binary:Version}),
+ librust-indenter-0.3+std-dev (= ${binary:Version}),
+ librust-indenter-0.3.3-dev (= ${binary:Version}),
+ librust-indenter-0.3.3+default-dev (= ${binary:Version}),
+ librust-indenter-0.3.3+std-dev (= ${binary:Version})
+Description: Formatter wrapper that indents the text, designed for error display impls - Rust source code
+ This package contains the source for the Rust indenter crate, packaged by
+ debcargo for use with cargo and dh-cargo.
