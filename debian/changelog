@@ -1,3 +1,9 @@
+rust-indenter (0.3.3-1pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 16 Nov 2022 23:35:11 +0000
+
 rust-indenter (0.3.3-1) unstable; urgency=medium
 
   * Package indenter 0.3.3 from crates.io using debcargo 2.5.0
